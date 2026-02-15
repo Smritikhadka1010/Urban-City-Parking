@@ -433,7 +433,7 @@ class FinanceModule:
         return list(self.creditors)
 
 # =========================================================
-# Reporting Module (meets requirement wording properly)
+# Reporting Module 
 # =========================================================
 
 
