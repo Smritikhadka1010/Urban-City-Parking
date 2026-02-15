@@ -435,21 +435,6 @@ class FinanceModule:
 
 
 
-# =========================================================
-# Reporting Module (meets requirement wording properly)
-# =========================================================
-@dataclass
-class PassSale:
-    sold_on: date
-    pass_type: str            # WeeklyPass / MonthlyPass / SingleEntryPass
-    amount: float
-    pass_id: str
-    plate: str
-
-
-class ReportGenerator:
-    # ---- REQUIRED REPORTS ----
-    @staticmethod
     def monthly_pass_sales_report(pass_sales: list[PassSale]) -> dict[str, dict[str, int]]:
         """
         REQUIRED: Monthly sale report for weekly pass, monthly pass, single entry pass.
@@ -554,7 +539,6 @@ class ReportGenerator:
                 f"Expenses: ${exp.get(month, 0.0):.2f} | Profit: ${profit[month]:.2f}"
             )
         print("=======================================================\n")
-
 
 # =========================================================
 # Parking Lot
